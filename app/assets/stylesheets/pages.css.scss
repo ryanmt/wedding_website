@@ -1,74 +1,56 @@
+
 //Constants for wedding colors
 
 $blue: #3bbfce;
 $dark_purple: #68228B;
 $light_purple: #EED2EE;
 $medium_purple: #7A378B;
+$lavender: #CC99CC;
 $white: #FDF8FF;
 
 $margin: 16px;
 
 $background_color: lighten($light_purple, 8%);
 $header_dark: lighten($dark_purple, 5%);
-$header_light: #CC99CC;
+$header_light: $lavender;
 $header_shadow: #999;
-$header_link: darken($dark_purple, 25%);
-$header_link_visited: lighten($medium_purple, 12.5%);
+$picture_shadow: desaturate(lighten($light_purple, 7%),0%);
+$header_link_visited: darken($dark_purple, 5.5%);
+$header_link: $header_link_visited; //darken($dark_purple, 15%);
 $header_hover: lighten($medium_purple, 5%);
 
 $header-height: 40px;
-$header_text_size: 1.4em;
+$header_text_size: 1.6em;
 
 // For the slideshow
-$slides_width: 570px;
-$slides_height: 270px;
+$slides_width: 800px;
+$slides_height: 600px;
 
 .slides_container {
+  margin-left: auto;
+  margin-right: auto;
   width: $slides_width;
   height: $slides_height;
+  z-index: 1;
+  padding: 20 20 20 20px;
 }
 .slides_container div {
   width: $slides_width;
   height: $slides_height;
+  background: $picture_shadow;
   display: block;
+  z-index: -1;
 }
 
-
+//compass based gradient?
+// needs latest Compass, add '@import "compass"' to your scss
+@import "compass";
+header div {
+  background-color: rgb(94,37,122);
+  @include filter-gradient(#5e257a, #5e257a, horizontal);
+  @include background-image(linear-gradient(left, rgba(94,37,122,1) 0%,rgba(135,68,206,1) 29%,rgba(141,48,255,1) 74%,rgba(94,37,122,1) 100%));
+}
 // Pulled from Metriculator
-/*****************************************************************************************
- * Eric Meyer's Global CSS Reset
- * 
- * Including this because it's good to ensure
- * that browsers render the same things the same
- * way.
- * 
- * See http://meyerweb.com/eric/tools/css/reset/
- ****************************************************************************************/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
 body {
   line-height: 1;
 }
@@ -116,36 +98,35 @@ footer {
   min-height: 100%;
 }
 
-#main {
+#container {
   overflow: auto;
   padding: 0 10px;
   padding-bottom: 50px;
 }
 
+#sidebar {
+  float: left;
+  width: 120px;
+  background: $light_purple;
+  border-right: 5px;
+  padding-right: 20px;
+}
+
+#text_content {
+  padding-left: 20px;
+}
+
 header {
   height: 60px;
   line-height: 30px;
-  position: sticky;
+//  position: sticky;
+  z-index: 200
 }
 
 header img {
   display: none;
   padding: 0.8em;
   background: #fff;
-}
-
-#subheader {
-  /* <Awesome gradient-style action> */
-  background: #9f9f9f; /* Old browsers */
-  background: -moz-linear-gradient(top,  #9f9f9f 0%, #c3c3c3 20%, #ccc 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9f9f9f), color-stop(20%,#c3c3c3), color-stop(100%,#ccc)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #9f9f9f 0%,#c3c3c3 20%,#ccc 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #9f9f9f 0%,#c3c3c3 20%,#ccc 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #9f9f9f 0%,#c3c3c3 20%,#ccc 100%); /* IE10+ */
-  background: linear-gradient(top,  #9f9f9f 0%,#c3c3c3 20%,#ccc 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f9f9f', endColorstr='#ccc',GradientType=0 ); /* IE6-9 */
-  /* </Awesome gradient-style action> */
-  font-size: 0.8em;
 }
 
 /*****************************************************************************************
@@ -209,14 +190,6 @@ header nav li a:hover {
   text-decoration: none;
 } 
 
-header nav ul#subheader a:link {
-  color: #000;
-} 
-
-header nav ul#subheader a:visited {
-  color: #000;
-}
-
 /*****************************************************************************************
  * Navigation 
  ****************************************************************************************/
@@ -230,7 +203,7 @@ header nav {
 }
 
 header>nav {
-  background-color: $header_dark;
+//  background-color: $header_dark;
   width: 100%;
 }
 

@@ -7,6 +7,10 @@
 
 $(function(){
   $("#slides").slides({
-    preload: true
+    preload: true, 
+    pagination: false,
+    play: 3000, 
+    effect: 'fade',
+    slideSpeed: 150
   });
 });

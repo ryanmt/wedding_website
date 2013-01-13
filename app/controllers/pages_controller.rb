@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @tmp = nil
+    @images = Dir.glob("public/images/slideshow/*.*g").map {|f| f.sub("public", '')}.sort
   end
   def story
   end

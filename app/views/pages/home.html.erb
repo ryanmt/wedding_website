@@ -1,1 +1,18 @@
-<p>Insert real content here</p>
+<div id="slides">
+  <div class="slides_container">
+    <% @images.each do |img| %>
+      <div> 
+      <%= image_tag(img) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="link_footer">
+  <div id="left" class="column">
+  </div>
+  <div id="center" class="column">
+  </div>
+  <div id="right" class="column">
+  </div>
+</div>
