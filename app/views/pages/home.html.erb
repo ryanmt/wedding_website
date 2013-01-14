@@ -2,7 +2,7 @@
   <div class="slides_container">
     <% @images.each do |img| %>
       <div> 
-      <%= image_tag(img) %>
+        <%= image_tag(img) %>
       </div>
     <% end %>
   </div>
@@ -10,9 +10,12 @@
 
 <div class="link_footer">
   <div id="left" class="column">
+    <%= link_to image_tag(@buttons[:event], size: '100x50'), event_path, title: "Event Details" %>
   </div>
   <div id="center" class="column">
+    <%= link_to image_tag(@buttons[:invite], size: '100x50'), form_path, title: "Sign up for an Invitation" %>
   </div>
   <div id="right" class="column">
+    <%= link_to image_tag(@buttons[:temple], size: '100x50'), "http://www.ldschurchtemples.com/", title: "Temples" %>
   </div>
 </div>

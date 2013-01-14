@@ -5,6 +5,8 @@ JandrCom::Application.routes.draw do
 	get 'story' => 'pages#story'
 	get 'photos' => 'pages#photos'
 	get 'registry' => 'pages#registry'
+  get "event" => "pages#event"
+  get "form" => "pages#form"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

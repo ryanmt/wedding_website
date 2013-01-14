@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
   def home
     @tmp = nil
-    @images = Dir.glob("public/images/slideshow/*.*g").map {|f| f.sub("public", '')}.sort
+    @images = Dir.glob("app/assets/images/slideshow/*.*g").map {|f| f.sub("app/assets/images/", '')}.sort
+    @buttons = { event: "event_details.png", invite: "invitation_form.png", temple: "salt_lake_temple.png" }
   end
   def story
   end
@@ -11,5 +12,8 @@ class PagesController < ApplicationController
   end
   def registry
 		@registries = %w[amazon bedbathandbeyond]
+  end
+  def form 
+    @google_form = %Q{<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFgxU0U1YXFQXzBQcmk0cUEwSTJEM1E6MQ" width="760" height="571" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>}
   end
 end

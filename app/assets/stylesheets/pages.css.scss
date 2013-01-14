@@ -1,6 +1,9 @@
+// Layout Variables
+$left_column_width: 200px;
+$right_column_width: 100px;
+
 
 //Constants for wedding colors
-
 $blue: #3bbfce;
 $dark_purple: #68228B;
 $light_purple: #EED2EE;
@@ -21,6 +24,39 @@ $header_hover: lighten($medium_purple, 5%);
 
 $header-height: 40px;
 $header_text_size: 1.6em;
+
+// Prototyping for the columns
+
+#container {
+  padding-left: $left_column_width;
+  padding-right: $right_column_width;
+}
+
+#container .column {
+  position: relative;
+  float: left;
+}
+
+#center {
+  width: 100%;
+}
+#left {
+  width: $left_column_width;
+  right: $left_column_width;
+  margin-left: -100%;
+}
+#right {
+  width: $right_column_width;
+  margin-right: $right_column_width;
+}
+
+/**** IE6 fix ***/
+* html #left {
+  left: $right_column_width;
+}
+
+
+
 
 // For the slideshow
 $slides_width: 800px;
@@ -100,13 +136,13 @@ footer {
 
 .container {
   overflow: auto;
-  padding: 0 10px;
-  padding-bottom: 50px;
+  padding-left: $left_column_width;
+  padding-right: $right_column_width;
 }
 
 #sidebar {
   float: left;
-  width: 120px;
+  width: $left_column_width;
   background: $light_purple;
   border-right: 5px;
   padding-right: 20px;
