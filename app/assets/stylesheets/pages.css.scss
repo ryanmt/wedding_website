@@ -1,7 +1,9 @@
 // Layout Variables
 $left_column_width: 200px;
-$right_column_width: 100px;
+$right_column_width: 150px;
 
+$left_sidebar_width: 200px;
+$main_width: 900px;
 
 //Constants for wedding colors
 $blue: #3bbfce;
@@ -26,13 +28,17 @@ $header-height: 40px;
 $header_text_size: 1.6em;
 
 // Prototyping for the columns
+#google_form {
+  width: $main_width;
+  //Doesn't change anything... altering the content of the iframe from the Google embedding dialog
+}
 
-#container {
+#links_container {
   padding-left: $left_column_width;
   padding-right: $right_column_width;
 }
 
-#container .column {
+#links_container .column {
   position: relative;
   float: left;
 }
@@ -59,7 +65,7 @@ $header_text_size: 1.6em;
 
 
 // For the slideshow
-$slides_width: 800px;
+$slides_width: 900px;
 $slides_height: 600px;
 
 .slides_container {
@@ -68,7 +74,6 @@ $slides_height: 600px;
   width: $slides_width;
   height: $slides_height;
   z-index: 1;
-  padding: 20 20 20 20px;
 }
 .slides_container div {
   width: $slides_width;
@@ -89,6 +94,7 @@ header div {
 // Pulled from Metriculator
 body {
   line-height: 1;
+  min-width: 2*$left_column_width + $right_column_width ;
 }
 ol, ul {
   list-style: none;
@@ -111,7 +117,7 @@ table {
  ****************************************************************************************/
 .container {
   padding-top: 5px;
-  width: 710px;
+  width: 900px;
 }
 
 body {
@@ -136,13 +142,13 @@ footer {
 
 .container {
   overflow: auto;
-  padding-left: $left_column_width;
+  padding-left: $left_sidebar_width;
   padding-right: $right_column_width;
 }
 
 #sidebar {
   float: left;
-  width: $left_column_width;
+  width: $left_sidebar_width;
   background: $light_purple;
   border-right: 5px;
   padding-right: 20px;

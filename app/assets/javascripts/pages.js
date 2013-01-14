@@ -9,8 +9,12 @@ $(function(){
   $("#slides").slides({
     preload: true, 
     pagination: false,
+    generatePagination: false,
     play: 3000, 
     effect: 'fade',
     slideSpeed: 150
   });
 });
+
+$('#google_form').load("https://docs.google.com/spreadsheet/embeddedform?formkey=dFgxU0U1YXFQXzBQcmk0cUEwSTJEM1E6MQ");
+

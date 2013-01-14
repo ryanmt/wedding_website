@@ -11,9 +11,10 @@ class PagesController < ApplicationController
 		@flash_address = %q|<embed type="application/x-shockwave-flash" src="https://picasaweb.google.com/s/c/bin/slideshow.swf" width="1000" height="665" flashvars="host=picasaweb.google.com&captions=1&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F102471812054448043763%2Falbumid%2F5830190603807921249%3Falt%3Drss%26kind%3Dphoto%26authkey%3DGv1sRgCJ2-0c-guJ2ZigE%26hl%3Den_US" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>|
   end
   def registry
-		@registries = %w[amazon bedbathandbeyond]
+		@amazon = "amazon-logo.jpg"
+    @bbb = "bbb.gif"
   end
   def form 
-    @google_form = %Q{<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFgxU0U1YXFQXzBQcmk0cUEwSTJEM1E6MQ" width="760" height="571" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>}
+    @google_form = %Q{<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFgxU0U1YXFQXzBQcmk0cUEwSTJEM1E6MQ" width="900" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>}
   end
 end
