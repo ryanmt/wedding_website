@@ -44,12 +44,12 @@ $slides_height: 600px;
 
 //compass based gradient?
 // needs latest Compass, add '@import "compass"' to your scss
-@import "compass";
+/*@import "compass";
 header div {
   background-color: rgb(94,37,122);
   @include filter-gradient(#5e257a, #5e257a, horizontal);
   @include background-image(linear-gradient(left, rgba(94,37,122,1) 0%,rgba(135,68,206,1) 29%,rgba(141,48,255,1) 74%,rgba(94,37,122,1) 100%));
-}
+} */
 // Pulled from Metriculator
 body {
   line-height: 1;
@@ -98,7 +98,7 @@ footer {
   min-height: 100%;
 }
 
-#container {
+.container {
   overflow: auto;
   padding: 0 10px;
   padding-bottom: 50px;
