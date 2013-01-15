@@ -68,7 +68,9 @@ $header_text_size: 1.6em;
 }
 
 
-
+#left_box {
+  float: left;
+}
 
 // For the slideshow
 $slides_width: 900px;
