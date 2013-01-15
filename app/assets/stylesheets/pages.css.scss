@@ -5,6 +5,7 @@ $right_column_width: 150px;
 $left_sidebar_width: 20%;
 $main_width: 900px;
 $main_width_max: 1200px;
+$main_width_min: 800px;
 
 //Constants for wedding colors
 $blue: #3bbfce;
@@ -19,6 +20,7 @@ $margin: 16px;
 $background_color: lighten($light_purple, 8%);
 $header_dark: lighten($dark_purple, 5%);
 $header_light: $lavender;
+$header_background: $background_color;
 $header_shadow: #999;
 $picture_shadow: desaturate(lighten($light_purple, 7%),0%);
 $header_link_visited: darken($dark_purple, 5.5%);
@@ -33,10 +35,15 @@ $header_text_size: 1.6em;
   width: $main_width;
   //Doesn't change anything... altering the content of the iframe from the Google embedding dialog
 }
+textarea#entry_1.ss-q-long {
+  width: $main_width*0.5;
+}
+div#story {
+  width: 60%;
+}
 
 #links_container {
-  padding-left: $left_column_width;
-  padding-right: $right_column_width;
+  display: inline-block;
 }
 
 #links_container .column {
@@ -44,39 +51,13 @@ $header_text_size: 1.6em;
   float: left;
 }
 
-#center {
-  width: 100%;
-}
-#center .column {
-  display: inline-block;
-  overflow: hidden;
-}
-
-#left {
-  width: $left_column_width;
-  right: $left_column_width;
-  margin-left: -100%;
-}
-#right {
-  width: $right_column_width;
-  margin-right: $right_column_width;
-}
-
-/**** IE6 fix ***/
-* html #left {
-  left: $right_column_width;
-}
-
-
-
-
 #left_box {
   float: left;
-  padding-right: 20px;
+  padding-right: 120px;
 }
 // For the slideshow
-$slides_width: 900px;
-$slides_height: 600px;
+$slides_width: 700px;
+$slides_height: 500px;
 
 .slides_container {
   margin-left: auto;
@@ -104,7 +85,7 @@ header div {
 // Pulled from Metriculator
 body {
   line-height: 1;
-  min-width: 2*$left_column_width + $right_column_width ;
+  min-width: $main_width_min;
   max-width: $main_width_max;
 }
 ol, ul {
@@ -248,12 +229,14 @@ header nav li a:hover {
  * Navigation 
  ****************************************************************************************/
 header nav {
+  background: $header_background;
   position: fixed;
   white-space: nowrap;
   /* Lovely box shadows! */
-  -moz-box-shadow: 0px 1px 5px $header_shadow;
-  -webkit-box-shadow: 0px 1px 5px $header_shadow;
-  box-shadow: 0px 1px 5px $header_shadow;
+  -moz-box-shadow: 0px 2px 7px $header_shadow;
+  -webkit-box-shadow: 0px 2px 7px $header_shadow;
+  box-shadow: 0px 2px 7px $header_shadow;
+  z-index: 20;
 }
 
 header>nav {
