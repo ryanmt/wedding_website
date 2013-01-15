@@ -67,6 +67,13 @@ $header_text_size: 1.6em;
   left: $right_column_width;
 }
 
+
+
+
+#left_box {
+  float: left;
+  padding: 5px;
+}
 // For the slideshow
 $slides_width: 900px;
 $slides_height: 600px;
