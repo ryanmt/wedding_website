@@ -1,10 +1,11 @@
-<div#text_content>
+<div class="container">
+<%= render "layouts/sidebar" %>
+<div#registry_link_images>
   <div id="left_box">
-    <a href="http://www.amazon.com/registry/wedding/1YFJ94GXAVYPD">Amazon</a>
-    <%= image_tag(@amazon, size: "100x20px") %>
+    <%= link_to image_tag(@amazon, size: "100x20px"), "http://www.amazon.com/registry/wedding/1YFJ94GXAVYPD" %>
   </div>
   <div id="right_box">
-    <a href="http://www.bedbathandbeyond.com/regGiftRegistry.asp?WRN=-146646413">Bed Bath & Beyond</a>
-    <%= image_tag(@bbb) %>
+    <%= link_to image_tag(@bbb), "http://www.bedbathandbeyond.com/regGiftRegistry.asp?WRN=-146646413" %>
   </div>
+</div>
 </div>

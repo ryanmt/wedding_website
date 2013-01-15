@@ -2,8 +2,9 @@
 $left_column_width: 200px;
 $right_column_width: 150px;
 
-$left_sidebar_width: 200px;
+$left_sidebar_width: 20%;
 $main_width: 900px;
+$main_width_max: 1200px;
 
 //Constants for wedding colors
 $blue: #3bbfce;
@@ -46,6 +47,11 @@ $header_text_size: 1.6em;
 #center {
   width: 100%;
 }
+#center .column {
+  display: inline-block;
+  overflow: hidden;
+}
+
 #left {
   width: $left_column_width;
   right: $left_column_width;
@@ -95,6 +101,7 @@ header div {
 body {
   line-height: 1;
   min-width: 2*$left_column_width + $right_column_width ;
+  max-width: $main_width_max;
 }
 ol, ul {
   list-style: none;
@@ -152,6 +159,7 @@ footer {
   background: $light_purple;
   border-right: 5px;
   padding-right: 20px;
+  height: 100%;
 }
 
 #text_content {
