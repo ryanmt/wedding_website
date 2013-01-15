@@ -9,14 +9,7 @@
 </div>
 
 <div id="links_container">
-  <div id="left" class="column">
-    <p>Text about the SLC reception</p>
-  </div>
-  <div id="center" class="column">
-    <%= link_to image_tag(@buttons[:invite]), form_path, title: "Sign up for an Invitation" %>
-    <%= link_to image_tag(@buttons[:temple], size: "100x50"), "http://www.ldschurchtemples.com/", title: "Temples" %>
-  </div>
-  <div id="right" class="column">
-    <p>Text about the Blanding event</p>
-  </div>
+  <%= link_to image_tag(@buttons[:slc], size: "300x150"), "http://goo.gl/maps/ncEMN" %>
+  <%= link_to image_tag(@buttons[:invite], size: "300x150"), form_path, title: "Sign up for an Invitation" %>
+  <%= link_to image_tag(@buttons[:blanding], size: "300x150"), "http://goo.gl/maps/Hmlfj" %>
 </div>

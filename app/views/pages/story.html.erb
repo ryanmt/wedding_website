@@ -1,7 +1,15 @@
 <div class="container">
   <%= render "layouts/sidebar" %>
-  <div#text_content>
-    <p>link 1</p>
-    <p>link 2</p>
+  <div id="text_content">
+    <div id="story">
+      <%= image_tag(@us[:image], size: @size_of_photo) %>
+      <p class="story"><%= @us[:story] %></p>
+    </div>
+    <%- if false #comment out a block %>
+      <div id="story" style="display: hidden;">
+      <%= image_tag(@ryan[:image]) %>
+      <p class="story"><%=@ryan[:story] %></p>
+    </div>
+  <%- end %>
   </div>
 </div>
