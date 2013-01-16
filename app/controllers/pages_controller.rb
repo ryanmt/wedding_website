@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def home
     @tmp = nil
-    @images = Dir.glob("app/assets/images/slideshow/*.*g").map {|f| f.sub("app/assets/images/", '')}.sort
-    @buttons = { slc: "event_details1.png", invite: "invitation_form.png", blanding: "event_details2.png" }
+    @images = Dir.glob("app/assets/images/slideshow/*.*g", File::FNM_CASEFOLD).map {|f| f.sub("app/assets/images/", '')}.sort
+    @buttons = { slc: "event_details1.png", invite: "invitation_form.png", blanding: "event_details2.png", temple: "salt_lake_temple.png" }
   end
   def story
     @us = {image: "us.jpg", story:  %Q|For those of you who may not know the whole story, let me catch you up. Ryan and I met at a party last fall while I was working on my MBA and Ryan was working on a PhD in biochemistry at BYU. When Ryan picked me up in his truck and took me rock climbing for our first date, I knew I found a great guy.  I had already accepted an offer to work in New York City after graduation and we weren't sure how to continue dating. Ryan was born and raised in Salt Lake City and he swept me off my feet when he told me he would follow me out to New York.  We had several months of long distance while Ryan worked things out with his program to be able to continue his schooling remotely. We got engaged in September with a treasure hunt that led us to a beautiful bridge in Central Park where Ryan proposed.| }
