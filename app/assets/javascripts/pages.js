@@ -6,6 +6,7 @@
 //# GOOGLE ANALYTICS
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-37760713-1']);
+_gaq.push(['_setDomainNAme', 'janiceandryan.org']);
 _gaq.push(['_trackPageview']);
 
 (function() {
